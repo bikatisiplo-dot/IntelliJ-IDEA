@@ -1,64 +1,101 @@
-# IntelliJ IDEA
+<h1 align="center">
+  <img src="assets/img/icon-sm.png" width="72" alt="EMCP Tools logo"><br>
+  MCP Tools for WordPress &amp; Page Builders
+</h1>
 
-## Introduction
+<div align="center">
 
-IntelliJ IDEA is an integrated development environment (IDE) designed primarily for Java and Kotlin development, with additional support for other JVM languages and technologies. It provides tools for writing, analyzing, testing, debugging, and maintaining software within a unified workspace. The IDE supports projects ranging from standalone applications to complex enterprise systems containing multiple modules and external dependencies.
+[![Version](https://img.shields.io/github/v/release/msrbuilds/elementor-mcp?label=version&color=blue)](https://github.com/msrbuilds/elementor-mcp/releases)
+[![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green.svg)](LICENSE)
+[![PHP](https://img.shields.io/badge/PHP-%3E%3D8.1-8892BF.svg)](https://php.net)
+[![WordPress](https://img.shields.io/badge/WordPress-%3E%3D6.9-21759B.svg)](https://wordpress.org)
+[![Free MCP Tools](https://img.shields.io/badge/Free_MCP_Tools-244-orange.svg)](https://emcptools.com/docs/tools/overview/)
+[![Total MCP Tools with Pro](https://img.shields.io/badge/Total_MCP_Tools_with_Pro-578-blue.svg)](https://emcptools.com/free-vs-pro/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![GitHub Issues](https://img.shields.io/github/issues/msrbuilds/elementor-mcp)](https://github.com/msrbuilds/elementor-mcp/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/msrbuilds/elementor-mcp?style=social)](https://github.com/msrbuilds/elementor-mcp)
 
-One of its central capabilities is intelligent code assistance. Context-aware completion suggests classes, methods, variables, and expressions using information about the current project. Static code analysis identifies potential errors, redundant constructs, and maintainability issues before execution. Developers can apply automated refactoring operations, such as renaming symbols, extracting methods, and changing method signatures, while preserving references across the codebase.
+**[Docs](https://emcptools.com/docs/) · [Integrations](https://emcptools.com/integrations/) · [Changelog](https://emcptools.com/changelog) · [Pro](https://emcptools.com/pricing) [Download from WordPress](https://wordpress.org/plugins/emcp-lite/)**
 
-IntelliJ IDEA integrates with common build systems, including Maven and Gradle. These integrations allow developers to manage dependencies, execute build tasks, and synchronize project configurations without leaving the environment. Built-in version control functionality supports Git operations such as committing changes, comparing revisions, resolving conflicts, and managing branches.
+</div>
 
-The IDE also provides integrated debugging, testing, and database development capabilities, although specific features depend on the installed edition and plugins. Its extensible architecture supports additional programming languages, frameworks, and development workflows.
+Turn your WordPress site into something an AI agent can actually operate.
 
-For professional development teams, IntelliJ IDEA combines source code navigation, project configuration, automated inspections, and execution tools in a consistent environment. This reduces the need to switch between separate utilities during implementation, troubleshooting, and routine maintenance.
+EMCP Tools is a WordPress plugin that exposes your site as **[MCP](https://modelcontextprotocol.io/) tools**, so Claude, Cursor, and any other MCP client can build Elementor pages, write content, manage plugins and users, audit performance and security, and drive the plugins you already run. It runs on the [MCP Adapter](https://wordpress.org/plugins/mcp-adapter/): EMCP Tools includes a copy, and uses the official plugin instead when it is active.
 
-## Project Configuration and Build Management
+<img width="2331" height="1399" alt="emc-dashboard" src="https://github.com/user-attachments/assets/e939408d-7005-4c0f-b157-fdb353d4c0c6" />
 
-IntelliJ IDEA organizes development work around projects and modules. A project contains source files, configuration settings, libraries, and execution definitions. Modules represent logical components with independent source directories, dependencies, and compilation settings.
 
-To create a Java project, select New Project, choose Java, and configure the required Java Development Kit (JDK). The JDK determines which Java compiler and standard libraries are available. For projects using Maven or Gradle, select the corresponding build system during creation.
+> **EMCP Pro, 10% off for the GitHub community**: use code **`EMCPGIT`** at [emcptools.com/pricing](https://emcptools.com/pricing).
 
-When importing an existing application, open its project directory or build configuration. IntelliJ IDEA detects supported build configurations and can synchronize dependencies automatically. For example, a Gradle project containing `build.gradle.kts` can declare an external dependency:
+<img width="2132" height="471" alt="emcp-promo-banner-new" src="https://github.com/user-attachments/assets/d2439b0b-2f56-461d-b3be-1ccc39bc2877" />
 
-```
-dependencies {
-    implementation("org.apache.commons:commons-lang3:3.17.0")
-}
-```
 
-After Gradle synchronization, the library becomes available to the application through the configured dependency scope.
+## What it does
 
-The Project Structure dialog provides access to module settings, SDK selection, language levels, and dependency relationships. Incorrect SDK configurations can cause compilation failures even when the source code is valid.
+**244 Free tools, 578 total with Pro.** These are catalog totals across all supported integrations, including 334 Pro tools. The tools available to your AI client depend on your installed plugins, selected builder, and enabled tools. See the [tool catalog](https://emcptools.com/tools/) for every tool and what it needs.
 
-Developers can execute Maven and Gradle tasks through dedicated tool windows. Common operations include compiling source code, running tests, packaging artifacts, and cleaning generated files.
+**Build pages.** Dedicated integrations cover Elementor, Bricks, Breakdance, Avada, Divi 5, Thrive Architect, Oxygen, Kirki, WPBakery, Beaver Builder, BeBuilder and Visual Composer. Select one standalone builder while Gutenberg stays available. Spectra, Kadence Blocks, GenerateBlocks, Blocksy Blocks and Otter Blocks have independent toggles. Pro adapters expose native features verified for supported vendor versions; see each bundled skill for scope and limitations.
 
-For reproducible builds, keep dependency versions and build settings in Maven or Gradle configuration files rather than relying on IDE-specific settings. Commit these files to version control so continuous integration environments and other developers can reproduce the same build process.
+**Run the site.** Content and taxonomies, media, users, settings, plugins and themes, nav menus, the filesystem, and the database, all over MCP.
 
-## Code Execution, Testing, and Debugging
+**Understand and undo.** One-call page snapshots, public front-end HTML inspection, content search across your own pages and templates, a change ledger with rollback, and read-only performance and security scans that return a scored report.
 
-IntelliJ IDEA provides run configurations that define how applications and tests are executed. A configuration specifies an entry point, runtime environment, program arguments, environment variables, and working directory.
+**Speak your plugins.** Integrations that register only when the plugin is active: ACF, Meta Box, WooCommerce, 8 form builders, 7 SEO plugins, and the Elementor addon packs. New in 3.21.1, free: Redirection, Custom Post Type UI, Pods, WP Mail SMTP, LiteSpeed Cache and Wordfence; in Pro: FluentSMTP, Flamingo, Site Kit and Ultimate Member. Pro also covers Polylang, TranslatePress, TablePress, Tutor LMS, LifterLMS, The Events Calendar, Amelia, FluentCRM, MailPoet and FunnelKit. See the [integrations directory](https://emcptools.com/integrations/).
 
-To execute a Java application, open a class containing a valid `main` method and select Run. IntelliJ IDEA creates a corresponding run configuration, which can be modified through Run | Edit Configurations.
+**Animate with GSAP.** Pro includes an opt-in local GSAP 3.15.0 integration: core plus all 24 distributed plugins, stable WordPress handles, context and per-plugin switches, and MCP read/write management.
 
-For example, consider the following method:
+Elementor is **optional**. Every WordPress domain works without it; installing Elementor unlocks the page-building family.
 
-```
-public static int calculateTotal(int price, int quantity) {
-    return price * quantity;
-}
-```
+→ **[Full tool reference](https://emcptools.com/docs/tools/overview/)**
 
-To investigate an unexpected result, place a breakpoint on the return statement and launch the application using Debug. Execution pauses when the breakpoint is reached, allowing inspection of `price`, `quantity`, and the calculated expression.
+## Install
 
-The debugger supports several execution controls:
+1. Download the latest `emcp-tools-*.zip` from [Releases](https://github.com/msrbuilds/elementor-mcp/releases/).
+2. In WordPress: **Plugins → Add New → Upload Plugin**, then activate.
+3. Open the **EMCP Tools** menu in the admin sidebar.
 
-- Step Over: Executes the current line without entering called methods.
-- Step Into: Enters a method invocation to inspect its implementation.
-- Step Out: Continues execution until the current method returns.
-- Evaluate Expression: Calculates expressions using the current debugging context.
+Free installs update in place from **Dashboard → Updates**.
 
-Conditional breakpoints help investigate specific cases without interrupting every execution. For example, a condition such as `quantity < 0` pauses execution only when invalid input reaches the selected statement.
+**Requires** WordPress 6.9+ and PHP 8.1+. Elementor 3.20+ is optional (4.0+ for atomic elements). The [MCP Adapter](https://wordpress.org/plugins/mcp-adapter/) is included (the official plugin is used instead when it is active); the Abilities API is in WordPress core.
 
-IntelliJ IDEA also integrates with testing frameworks such as JUnit. Developers can execute individual tests, test classes, or complete test suites and inspect results in the test runner.
+→ [Installation guide](https://emcptools.com/docs/getting-started/installation/) · [Requirements](https://emcptools.com/docs/getting-started/requirements/)
 
-For efficient troubleshooting, reproduce failures with automated tests, inspect relevant variable states, and verify corrections by rerunning the affected tests.
+## Connect your AI client
+
+The **Connection** screen in the admin walks you through four steps and generates a ready-to-paste config for your client, including a one-click `.mcpb` bundle for Claude Desktop. That is the fastest route, and it fills in your site URL and credentials for you.
+
+Step-by-step guides per client:
+
+[Claude Code](https://emcptools.com/docs/connecting/claude-code/) · [Claude Desktop](https://emcptools.com/docs/connecting/claude-desktop/) · [Cursor](https://emcptools.com/docs/connecting/cursor/) · [VS Code](https://emcptools.com/docs/connecting/vscode/) · [Antigravity](https://emcptools.com/docs/connecting/antigravity/) · [ChatGPT](https://emcptools.com/docs/connecting/chatgpt-app/) · [WP-CLI](https://emcptools.com/docs/connecting/wp-cli/) · [OAuth](https://emcptools.com/docs/connecting/oauth/) · [Multiple sites](https://emcptools.com/docs/connecting/multiple-sites/)
+
+Tools not showing up? Start with [no tools appearing](https://emcptools.com/docs/troubleshooting/no-tools-appearing/) or [tool cap exceeded](https://emcptools.com/docs/troubleshooting/tool-cap-exceeded/).
+
+## Safe by default
+
+Every tool runs a real WordPress capability check before it does anything, so an agent can only do what the authenticating user could do by hand.
+
+Anything that writes, deletes, or renders site-wide **ships disabled** and is opt-in from **EMCP Tools → Tools**. Destructive operations additionally require an explicit `confirm: true`. Administrators cannot be edited over MCP, there is no delete-user tool, and filesystem access is confined to the WordPress root with automatic backups and an audit log.
+
+→ [Permission model](https://emcptools.com/docs/tools/overview/#permission-model)
+
+## Sample prompts
+
+The [`prompts/`](prompts/) directory has five complete landing-page blueprints, design system, structure, images, and animations, that build an entire page from a single paste: [Local Business](prompts/LOCAL_BUSINESS.md), [Dental Clinic](prompts/DENTAL_CLINIC.md), [Developer Portfolio](prompts/WEB_DEVELOPER_PORTFOLIO.md), [Hair Salon](prompts/HAIR_SALON.md), [Car Wash](prompts/CAR_WASH.md).
+
+A library of 100 prompts across 20 categories, 50 landing pages and 50 complete websites, is included with [Pro](https://emcptools.com/pricing).
+
+## Contributing
+
+Bug reports, feature requests, and pull requests are all welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+1. Fork the repo
+2. Create a branch (`git checkout -b feature/amazing-tool`)
+3. Make your changes and test locally
+4. Open a Pull Request
+
+**Contributors**: [@msrbuilds](https://github.com/msrbuilds) (author and maintainer)
+
+## License
+
+[GNU General Public License v2.0 or later](LICENSE).
